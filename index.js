@@ -11,6 +11,10 @@ function validateRoman(string) {
   if (!string.match(/^[MDCLXVI]+$/)) {
     throw new Error('invalid value');
   }
+
+  if (string.match(/I{4,}|V{4,}|X{4,}|L{4,}|C{4,}|D{4,}|M{4,}/)) {
+    throw new Error('invalid value');
+  }
 }
 
 function romanToArabic(roman) {

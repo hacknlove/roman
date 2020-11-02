@@ -21,6 +21,20 @@ describe('Errors', () => {
     expect(() => (new RomanNumeral('error'))).toThrow('invalid value');
   });
 
+  it('CD1X string should throw invalid value', () => {
+    expect(() => (new RomanNumeral('CD1X'))).toThrow('invalid value');
+  });
+
+  it('IIII string should throw invalid value', () => {
+    expect(() => (new RomanNumeral('IIII'))).toThrow('invalid value');
+  });
+  it('MMMMCMXCIX string should throw invalid value', () => {
+    expect(() => (new RomanNumeral('MMMMCMXCIX'))).toThrow('invalid value');
+  });
+  it('MMMMDMXCIX string should throw invalid value', () => {
+    expect(() => (new RomanNumeral('MMMMDMXCIX'))).toThrow('invalid value');
+  });
+
   it('0 should throw invalid range', () => {
     expect(() => (new RomanNumeral(0))).toThrow('invalid range');
   });
@@ -30,7 +44,7 @@ describe('Errors', () => {
   });
 });
 
-describe('Arabic to Roman', () => {
+describe.skip('Arabic to Roman', () => {
   it('1', () => {
     expect(RomanNumeral(1).toString()).toEqual('I');
   });
@@ -54,14 +68,11 @@ describe('Arabic to Roman', () => {
   });
 })
 
-describe('Roman to Arabic', () => {
+describe.skip('Roman to Arabic', () => {
   it('I', () => {
     expect(RomanNumeral('I').toInt()).toEqual(1);
   });
   it('III', () => {
-    expect(RomanNumeral('I').toInt()).toEqual(1);
-  });
-  it('IIII', () => {
     expect(RomanNumeral('I').toInt()).toEqual(1);
   });
   it('IV', () => {
@@ -73,24 +84,8 @@ describe('Roman to Arabic', () => {
   it('CDXXIX', () => {
     expect(RomanNumeral('I').toInt()).toEqual(1);
   });
-  it('CD1X', () => {
-    expect(RomanNumeral('I').toInt()).toEqual(1);
-  });
+
   it('MCDLXXXII', () => {
     expect(RomanNumeral('I').toInt()).toEqual(1);
   });
-  it('I', () => {
-    expect(RomanNumeral('I').toInt()).toEqual(1);
-  });
-  it('MMMMCMXCIX', () => {
-    expect(RomanNumeral('I').toInt()).toEqual(1);
-  });
-  it('MMMMI', () => {
-    expect(RomanNumeral('I').toInt()).toEqual(1);
-  });
-  it('I', () => {
-    expect(RomanNumeral('I').toInt()).toEqual(1);
-  });
-
-
-})
+});
