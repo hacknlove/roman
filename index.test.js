@@ -68,7 +68,7 @@ describe('Arabic to Roman', () => {
   });
 });
 
-describe.skip('Roman to Arabic', () => {
+describe('Roman to Arabic', () => {
   it('I', () => {
     expect(RomanNumeral('I').toInt()).toEqual(1);
   });

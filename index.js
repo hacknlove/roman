@@ -35,7 +35,17 @@ const pieces = [
 ];
 
 function romanToArabic(roman) {
+  let pending = roman;
+  let value = 0;
 
+  while (pending.length) {
+    const [pieceValue, piece] = pieces.find(([, p]) => pending.startsWith(p));
+
+    value += pieceValue;
+    pending = pending.substr(piece.length);
+  }
+
+  return value;
 }
 
 function arabicToRoman(arabic, current = '') {
