@@ -1,19 +1,19 @@
 /* eslint-disable no-plusplus */
-function validateArabic(number) {
-  if (number < 1 || number > 3999) {
+function validateArabic(arabic) {
+  if (arabic < 1 || arabic > 3999) {
     throw new Error('invalid range');
   }
 }
 
-function validateRoman(string) {
-  if (!string) {
+function validateRoman(roman) {
+  if (!roman) {
     throw new Error('value required');
   }
-  if (!string.match(/^[MDCLXVI]+$/)) {
+  if (!roman.match(/^[MDCLXVI]+$/)) {
     throw new Error('invalid value');
   }
 
-  if (string.match(/I{4,}|V{4,}|X{4,}|L{4,}|C{4,}|D{4,}|M{4,}/)) {
+  if (roman.match(/I{4,}|V{4,}|X{4,}|L{4,}|C{4,}|D{4,}|M{4,}/)) {
     throw new Error('invalid value');
   }
 }
@@ -43,16 +43,16 @@ function arabicToRoman(arabic, current = '') {
   while (arabic < pieces[i][0]) {
     i++;
   }
+
+  const times = Math.floor(arabic / pieces[i][0]);
+
+  current += pieces[i][1].repeat(times);
+
   if (arabic % pieces[i][0] === 0) {
-    return current + pieces[i][1].repeat(arabic / pieces[i][1])
+    return current;
   }
 
-
-
-  current = current + pieces[i][1].repeat(arabic / pieces[i][1])
-
-  return arabicToRoman(arabic - )
-
+  return arabicToRoman(arabic - times * pieces[i][0], current);
 }
 
 function RomanNumeral(input) {
@@ -82,14 +82,14 @@ function RomanNumeral(input) {
     }
     this.arabic = romanToArabic(this.roman);
     return this.arabic;
-  }
+  };
   this.toString = function toString() {
     if (this.roman) {
       return this.roman;
     }
-    this.roman = romanToArabic(this.arabic);
+    this.roman = arabicToRoman(this.arabic);
     return this.roman;
-  }
+  };
 }
 
 module.exports = RomanNumeral;

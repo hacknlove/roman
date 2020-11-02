@@ -44,29 +44,29 @@ describe('Errors', () => {
   });
 });
 
-describe.skip('Arabic to Roman', () => {
+describe('Arabic to Roman', () => {
   it('1', () => {
     expect(RomanNumeral(1).toString()).toEqual('I');
   });
   it('3', () => {
-    expect(RomanNumeral(1).toString()).toEqual('III');
+    expect(RomanNumeral(3).toString()).toEqual('III');
   });
   it('4', () => {
-    expect(RomanNumeral(1).toString()).toEqual('IV');
+    expect(RomanNumeral(4).toString()).toEqual('IV');
   });
   it('5', () => {
-    expect(RomanNumeral(1).toString()).toEqual('V');
+    expect(RomanNumeral(5).toString()).toEqual('V');
   });
   it('1968', () => {
-    expect(RomanNumeral(1).toString()).toEqual('MCMLXIIX');
+    expect(RomanNumeral(1968).toString()).toEqual('MCMLXVIII');
   });
   it('2999', () => {
-    expect(RomanNumeral(1).toString()).toEqual('MMCMXCIX');
+    expect(RomanNumeral(2999).toString()).toEqual('MMCMXCIX');
   });
   it('3000', () => {
-    expect(RomanNumeral(1).toString()).toEqual('MMM');
+    expect(RomanNumeral(3000).toString()).toEqual('MMM');
   });
-})
+});
 
 describe.skip('Roman to Arabic', () => {
   it('I', () => {
