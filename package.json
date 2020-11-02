@@ -1,0 +1,27 @@
+{
+  "name": "roman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hacknlove/roman.git"
+  },
+  "author": "antonio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hacknlove/roman/issues"
+  },
+  "homepage": "https://github.com/hacknlove/roman#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jest": "^26.6.2",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
