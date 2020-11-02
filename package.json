@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hacknlove/roman#readme",
   "dependencies": {
+    "eslint-plugin-jest": "^24.1.0"
   },
   "devDependencies": {
     "jest": "^26.6.2",

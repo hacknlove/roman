@@ -42,14 +42,14 @@ function RomanNumeral(input) {
       throw new Error('invalid value');
   }
 
-  toInt() {
+  this.toInt = function toInt() {
     if (this.arabic) {
       return this.arabic;
     }
     this.arabic = romanToArabic(this.roman);
     return this.arabic;
   }
-  toString() {
+  this.toString = function toString() {
     if (this.roman) {
       return this.roman;
     }
@@ -58,4 +58,4 @@ function RomanNumeral(input) {
   }
 }
 
-exports.module = RomanNumeral;
+module.exports = RomanNumeral;
