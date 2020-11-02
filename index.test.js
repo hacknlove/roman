@@ -73,19 +73,19 @@ describe('Roman to Arabic', () => {
     expect(RomanNumeral('I').toInt()).toEqual(1);
   });
   it('III', () => {
-    expect(RomanNumeral('I').toInt()).toEqual(1);
+    expect(RomanNumeral('III').toInt()).toEqual(3);
   });
   it('IV', () => {
-    expect(RomanNumeral('I').toInt()).toEqual(1);
+    expect(RomanNumeral('IV').toInt()).toEqual(4);
   });
   it('V', () => {
-    expect(RomanNumeral('I').toInt()).toEqual(1);
+    expect(RomanNumeral('V').toInt()).toEqual(5);
   });
   it('CDXXIX', () => {
-    expect(RomanNumeral('I').toInt()).toEqual(1);
+    expect(RomanNumeral('CDXXIX').toInt()).toEqual(429);
   });
 
   it('MCDLXXXII', () => {
-    expect(RomanNumeral('I').toInt()).toEqual(1);
+    expect(RomanNumeral('MCDLXXXII').toInt()).toEqual(1482);
   });
 });
